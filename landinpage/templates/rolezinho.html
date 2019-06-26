@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+<h2>Rolês em osasco</h2>
+
+{% for i in roles %}
+    <p>{{i}}</p>
+{% endfor %}
+
+
+{% if bairro == 'RochDale' %}
+
+    <p>Em RochDale tem enchente e bailão</p>
+
+{% else %}
+
+    <p>Em Santa Maria não tem enchente, só bailão</p>
+
+{% endif %}
+
+
+{% endblock%}
